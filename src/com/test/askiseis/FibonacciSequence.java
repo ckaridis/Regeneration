@@ -2,9 +2,9 @@ package com.test.askiseis;
 
 import java.util.Scanner;
 
-public class Askisi7 extends MainProgram {
+public class FibonacciSequence extends MainProgram {
 
-    public Askisi7 ()
+    public FibonacciSequence ()
 
     {
         Scanner scan = new Scanner ( System.in );

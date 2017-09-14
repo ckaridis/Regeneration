@@ -1,6 +1,5 @@
 package com.test.askiseis;
 
-import java.lang.invoke.SwitchPoint;
 import java.util.Scanner;
 //test
 
@@ -12,6 +11,7 @@ public class MainProgram {
         float input2 = 0;
         float result = 0;
         int i = 0;
+        float nnumber;
 
         do {
             // epanalipsh gia na doulepsei panw apo mia askhsh
@@ -24,28 +24,30 @@ public class MainProgram {
             //thn katallhlh askhsh
             input = scan.nextInt ();
             switch (input) {
+
                 case 1:
                     System.out.println ( "1 Selected" );
-                    i = 0;
-                    result = 0;
-                    input2 = scan.nextInt ();
-                    while (i <= input2) {
-                        result = result + i;
-                        i++;
-                        System.out.println ( result );
-                    }
+                    System.out.println ( "Implement a program that calculates the sum of 1+2+3 .. +N" );
+                    System.out.println ( "Please give us the N number" );
+                    nnumber = scan.nextInt ();
+                    SumSequence sumseq = new SumSequence (nnumber);
+                    System.out.println ( "The result is: " + sumseq.getResult () );
                     break;
 
                 case 2:
                     System.out.println ( "2 Selected" );
-                    System.out.println ( "Please give us the number" );
-                    float number = scan.nextInt ();
-                    System.out.println ( "Please give us the power" );
-                    float power = scan.nextInt ();
-                    System.out.println ( "the result is: " + Math.pow ( number, power ) );
+                    System.out.println ( "Implement a Java program that calculates a^n given that a and n are integers" );
+                    System.out.println ( "Please give us the a number" );
+                    float numbera = scan.nextInt ();
+                    System.out.println ( "Please give us the n number" );
+                    nnumber = scan.nextInt ();
+                    System.out.println ( "the result is: " + Math.pow ( numbera, nnumber ) );
                     break;
 
                 case 3:
+                    System.out.println ( "3 Selected" );
+                    System.out.println ( "Implement a Java program that calculates the sum of 1+ 1/2 + 1/3 + ... 1/n" );
+                    System.out.println ( "Please give us the a number" );
                     i = 1;
                     result = 1;
                     while (i < 100) {
@@ -56,7 +58,7 @@ public class MainProgram {
                     break;
                 case 4:
                     System.out.println ( "Please give us a number" );
-                    number = scan.nextInt ();
+                    float number = scan.nextInt ();
                     result = number % 2;
                     if (result == 0) {
                         System.out.println ( "This number is EVEN" );
@@ -100,7 +102,7 @@ public class MainProgram {
                     }
                     break;
                 case 17:
-                    Askisi7 ask7 = new Askisi7 ();
+                    FibonacciSequence fib = new FibonacciSequence ();
                     break;
 
                 case 16:
