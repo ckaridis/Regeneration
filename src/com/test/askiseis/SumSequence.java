@@ -20,5 +20,6 @@ public class SumSequence {
     public int getResult () {
     return this.result;
     }
+    //
 
 }
