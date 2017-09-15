@@ -8,9 +8,6 @@ public class MainProgram {
     public static void main ( String[] args ) {
 
         int input = 0;
-        float input2 = 0;
-        float result = 0;
-        int i = 0;
         float nnumber;
 
         do {
@@ -79,21 +76,15 @@ public class MainProgram {
                     IntegerDivisors intdiv = new IntegerDivisors ( integer );
                     break;
 
-                case 7:
-                    System.out.println ( "Please define the number of repeats" );
-                    int number = scan.nextInt ();
-                    float sum2 = 1;
-                    float sum3 = 0;
-                    i = 0;
-                    while (i < number) {
-                        float sum1 = sum2 + sum3;
-                        sum2 = sum3;
-                        sum3 = sum1;
-
-                        System.out.println ( sum1 );
-                        i++;
-                    }
+                case 7: //FibonacciCalculator NOT WORKING
+                    System.out.println ( "7 Selected" );
+                    System.out.println ( "Implement a Java program that calculates the Fibonacci sequence" );
+                    System.out.println ( "Please give us the number of repeats" );
+                    integer = scan.nextInt ();
+                    FibonacciCalculator fibcalc = new FibonacciCalculator(integer);
+                    System.out.println(fibcalc.sum1);
                     break;
+
                 case 17:
                     FibonacciSequence fib = new FibonacciSequence ();
                     break;
@@ -103,7 +94,7 @@ public class MainProgram {
                     break;
                 case 20:
                     System.out.println ( "Please give us a number" );
-                    number = scan.nextInt ();
+                    int number = scan.nextInt ();
                     Askisi5 ask5 = new Askisi5 ( number );
                     System.out.println ( "The number of digits is: " + ask5.getLength () );
                     break;

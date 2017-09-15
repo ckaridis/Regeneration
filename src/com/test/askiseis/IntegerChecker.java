@@ -5,11 +5,7 @@ public class IntegerChecker {
 
     public IntegerChecker (int intnum) {
         int result = (intnum % 2);
-        if (result == 0) {
-            ret = true;
-        } else {
-            ret = false;
-        }
+        ret = result == 0;
     }
 
     public boolean isRet () {

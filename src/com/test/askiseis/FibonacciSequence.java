@@ -2,7 +2,7 @@ package com.test.askiseis;
 
 import java.util.Scanner;
 
-public class FibonacciSequence extends MainProgram {
+public class FibonacciSequence {
 
     public FibonacciSequence ()
 
