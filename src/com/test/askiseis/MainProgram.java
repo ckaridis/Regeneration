@@ -25,7 +25,7 @@ public class MainProgram {
             input = scan.nextInt ();
             switch (input) {
 
-                case 1: //
+                case 1: // SumSequence -- me Setter/Getter
                     System.out.println ( "1 Selected" );
                     System.out.println ( "Implement a program that calculates the sum of 1+2+3 .. +N" );
                     System.out.println ( "Please give us the N number" );
@@ -34,7 +34,7 @@ public class MainProgram {
                     System.out.println ( "The result is: " + sumseq.getResult () );
                     break;
 
-                case 2:
+                case 2: // a^n -- me Setter/Getter
                     System.out.println ( "2 Selected" );
                     System.out.println ( "Implement a Java program that calculates a^n given that a and n are integers" );
                     System.out.println ( "Please give us the a number" );
@@ -44,7 +44,7 @@ public class MainProgram {
                     System.out.println ( "the result is: " + Math.pow ( numbera, nnumber ) );
                     break;
 
-                case 3:
+                case 3: // ReversedSumSequence -- me Setter/Getter
                     System.out.println ( "3 Selected" );
                     System.out.println ( "Implement a Java program that calculates the sum of 1+ 1/2 + 1/3 + ... 1/n" );
                     System.out.println ( "Please give us the n number" );
@@ -52,7 +52,8 @@ public class MainProgram {
                     ReversedSumSequence revsum = new ReversedSumSequence (nnumber);
                     System.out.println ( "The result is: " + revsum.getResult () );
                     break;
-                case 4:
+
+                case 4: // IntegerChecker -- me Setter/Getter
                     System.out.println ( "4 Selected" );
                     System.out.println ( "Implement a Java program that checks if the given integer is an odd or not" );
                     System.out.println ( "Please give us the integer" );
@@ -60,30 +61,27 @@ public class MainProgram {
                     IntegerChecker intcheck = new IntegerChecker(intnum);
                     System.out.println ( "This integer is odd is: " + intcheck.isRet () );
                     break;
-                case 5:
-                    System.out.println ( "Please give us a number" );
-                    float number = scan.nextInt ();
-                    int length = 0;
-                    length = String.valueOf ( (int) number ).length ();
-                    //xreiazetai metatroph se
-                    // integer giati to pernei san float me .0
-                    System.out.println ( "The number of digits is: " + length );
-                    break;
-                case 6:
-                    //System.out.println ( "=== UNDER CONSTRUCTION ===" );
-                    System.out.println ( "Please give us a number" );
-                    number = scan.nextInt ();
 
-                    for (i = 1; i <= number; i++) {
-                        if (number % i == 0) {
-                            System.out.println ( i );
-
-                        }
-                    }
+                case 5: // IntegerDigitsCounter -- me Constructor
+                    System.out.println ( "5 Selected" );
+                    System.out.println ( "Implement a Java program that prints the digits of a given integer" );
+                    System.out.println ( "Please give us the Integer" );
+                    int integer = scan.nextInt ();
+                    IntegerDigitsCounter intdig = new IntegerDigitsCounter (integer);
+                    System.out.println ( "The number of digits is:" + intdig.integerDigitsCounter () );
                     break;
+
+                case 6: // IntegerDivisors me Constructor
+                    System.out.println ( "6 Selected" );
+                    System.out.println ( "Implement a Java program that prints the divisors of a given integer" );
+                    System.out.println ( "Please give us the Integer" );
+                    integer = scan.nextInt ();
+                    IntegerDivisors intdiv = new IntegerDivisors ( integer );
+                    break;
+
                 case 7:
                     System.out.println ( "Please define the number of repeats" );
-                    number = scan.nextInt ();
+                    int number = scan.nextInt ();
                     float sum2 = 1;
                     float sum3 = 0;
                     i = 0;
